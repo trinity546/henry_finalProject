@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Message Stuff</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <input type='text' id='username' placeholder='username' />
+        <input type='text' id='password' placeholder='password' />
+        <button id='sub'>Login</button>
+        
+        <input type='text' id='message' placeholder='Type da message'/>
+        <button id='msg'>Submit Message</button>
+    </body>
+    <script>
+        $(document).ready(function(){
+            var user_id = -1;
+            document.getElementById('sub').onclick = function(){
+           //connect and insert 
+            $.ajax({
+               url:"controller/user.php",
+                type:"post",
+                dataType:"json",
+                data: {
+                    method:"login",
+                    username: document.getElementById('username').value,
+                    password: document.getElementById('password').value
+                },
+                success:function(resp){
+                    alert("Logged in!");
+                    user_id = resp[0].id;
+                }
+            });
+            
+            }
+            
+            document.getElementById('msg').onclick = function(){
+           //connect and insert 
+            $.ajax({
+               url:"controller/message.php",
+                type:"post",
+                dataType:"json",
+                data: {
+                    method:"insert",
+                    message: document.getElementById('message').value,
+                    user_id: user_id
+                },
+                success:function(resp){
+                    alert("Message Inserted!");
+                    user_id = resp[0].id;
+                }
+            });
+            
+            }
+            
+        });
+    </script>
+</html>
+

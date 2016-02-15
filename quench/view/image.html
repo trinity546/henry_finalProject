@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users stuff</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <input type='text' id='username' placeholder='username' />
+        <input type='text' id='password' placeholder='password' />
+        <button id='sub'>Login</button>
+        
+        <input type='text' id='title' placeholder='title' />
+        <input type='text' id='path' placeholder='path' />
+        <button id='insert_img'>Insert Image</button>
+        
+    </body>
+    <script>
+        $(document).ready(function(){
+            var user_id = -1;
+            document.getElementById('sub').onclick = function(){
+           //connect and insert 
+            $.ajax({
+               url:"controller/user.php",
+                type:"post",
+                dataType:"json",
+                data: {
+                    method:"login",
+                    username: document.getElementById('username').value,
+                    password: document.getElementById('password').value
+                },
+                success:function(resp){
+                    alert("Logged In!");
+                    user_id = resp[0].id;
+                }
+            });
+         
+                
+            }
+            
+            document.getElementById("insert_img").onclick = function(){
+                
+             $.ajax({
+               url:"controller/image.php",
+                type:"post",
+                dataType:"html",
+                data: {
+                    method:"insert",
+                    title: document.getElementById('title').value,
+                    path: document.getElementById('path').value,
+                    user_id: user_id
+                },
+                success:function(resp){
+                    alert("Inserted Image!");
+                    console.log(resp);
+
+                    
+                }
+            });
+                
+                
+                
+            }
+            
+        });
+    </script>
+</html>
+
