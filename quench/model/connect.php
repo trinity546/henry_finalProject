@@ -1,7 +1,7 @@
 <?php
     
 try {
-    $db = new PDO("mysql:dbname=gallery; host=localhost", "root", "root");
+    $db = new PDO("mysql:dbname=quench; host=localhost", "root", "root");
 } catch(PDOException $e) {
     echo "FAIL";
 }
