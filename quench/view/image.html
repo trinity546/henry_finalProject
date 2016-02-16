@@ -2,13 +2,17 @@
 <html>
     <head>
         <title>Image Detail</title>
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css-master/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/my.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     </head>
 
     <body>
-        <input type='text' id='username' placeholder='username' />
-        <input type='text' id='password' placeholder='password' />
-        <button id='sub'>Login</button>
+        <p id="title"></p>
+        <img src="">
+        <p id="desc"></p>
+        <p id="comments"></p>
+        <p id="tags"></p>
         
         <input type='text' id='title' placeholder='title' />
         <input type='text' id='path' placeholder='path' />
@@ -16,7 +20,7 @@
         
     </body>
     <script>
-        $(document).ready(function(){
+   /*     $(document).ready(function(){
             var user_id = -1;
             document.getElementById('sub').onclick = function(){
            //connect and insert 

@@ -3,21 +3,27 @@
 <html>
     <head>
         <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css-master/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/my.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     </head>
 
     <body>
-        <input type='text' id='username' placeholder='username' />
-        <input type='text' id='password' placeholder='password' />
+        <h3>Sign Up</h3>
+        <input type='text' id='email_r' placeholder='Email' />
+        <input type='text' id='username_r' placeholder='Username' />
+        <input type='text' id='password_r' placeholder='Password' />
+        <input type='text' id='c_password_r' placeholder='Confirm Your Password' />
+
         <button id='sub'>Register</button>
         
-        <input type='text' id='title' placeholder='title' />
+        <!--<input type='text' id='title' placeholder='title' />
         <input type='text' id='path' placeholder='path' /> 
-        <button id='submit'>Submit</button>
+        <button id='submit'>Submit</button> -->
         
     </body>
     <script>
-        $(document).ready(function(){
+     /*  $(document).ready(function(){
             
             document.getElementById('sub').onclick = function(){
            //connect and insert 
