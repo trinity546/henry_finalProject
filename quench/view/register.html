@@ -3,38 +3,46 @@
 <html>
     <head>
         <title>Register</title>
-        <link rel="stylesheet" type="text/css" href="../css/normalize.css-master/normalize.css">
-        <link rel="stylesheet" type="text/css" href="../css/my.css">
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css-master/normalize.css">
+        <link rel="stylesheet" type="text/css" href="./css/my.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     </head>
 
     <body>
-        <h3>Sign Up</h3>
-        <input type='text' id='email_r' placeholder='Email' />
-        <input type='text' id='username_r' placeholder='Username' />
-        <input type='text' id='password_r' placeholder='Password' />
-        <input type='text' id='c_password_r' placeholder='Confirm Your Password' />
-
-        <button id='sub'>Register</button>
+         
+        <section class='loginsection'>
+            
+            <img id='logo' src='img/quenchlogo.png'/>
+            <br/><br/><br/><br/>
+            <input type='text' id='email_r' placeholder='Email'/><br/>
+            <input type="text" id="username_r" placeholder="Username"/><br/>
+            <input type="password" id="password_r" placeholder="Password"/><br/>
+            <input type="password" id='c_password_r' placeholder='Confirm Your Password'/><br/>
+            <button type="submit" id='sub'>Register</button><br/><br/><br/>
+            <span>Already have an account? <a href="#/login">Login</a></span>
+            
+        </section>
         
+
         <!--<input type='text' id='title' placeholder='title' />
         <input type='text' id='path' placeholder='path' /> 
         <button id='submit'>Submit</button> -->
         
     </body>
     <script>
-     /*  $(document).ready(function(){
+       $(document).ready(function(){
             
             document.getElementById('sub').onclick = function(){
            //connect and insert 
             $.ajax({
-               url:"controller/user.php",
+               url:"controller/register.php",
                 type:"post",
                 dataType:"html",
                 data: {
                     method:"insert",
-                    username: document.getElementById('username').value,
-                    password: document.getElementById('password').value
+                    email: document.getElementById('email_r').value,
+                    username: document.getElementById('username_r').value,
+                    password: document.getElementById('password_r').value
                 },
                 success:function(resp){
                     alert("INSERT!");
@@ -44,6 +52,7 @@
             }
             
         });
+        
     </script>
 </html>
 

@@ -26,7 +26,22 @@ MessageApp.config([
                 templateUrl:"view/amsg.html",
                 controller:"chatCtrl"
             }
+        ).when(
+            "/login",
+            {
+                templateUrl:"view/login.html"
+            }    
             
-        ) 
+        ).when(
+            "/register",
+            {
+                templateUrl:"view/register.html"
+            }  
+        ).when(
+            "/feed",
+            {
+                templateUrl:"view/feed.html"
+            } 
+        )
     }
 ]);

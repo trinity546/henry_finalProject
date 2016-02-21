@@ -4,7 +4,7 @@
     function insert_user(){
         //insert info into the users table
         global $db;
-        $query = "INSERT INTO users (username, password) VALUES ('".$_POST['username']."', '".$_POST['password']."')";
+        $query = "INSERT INTO users (email, username, password) VALUES ('".$_POST['email']."', '".$_POST['username']."', '".$_POST['password']."')";
         $result = $db->query($query);
         
     }
