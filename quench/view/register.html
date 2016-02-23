@@ -5,7 +5,8 @@
         <title>Register</title>
         <link rel="stylesheet" type="text/css" href="./css/normalize.css-master/normalize.css">
         <link rel="stylesheet" type="text/css" href="./css/my.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+       
     </head>
 
     <body>
@@ -14,11 +15,17 @@
             
             <img id='logo' src='img/quenchlogo.png'/>
             <br/><br/><br/><br/>
+            
             <input type='text' id='email_r' placeholder='Email'/><br/>
-            <input type="text" id="username_r" placeholder="Username"/><br/>
+            <input type="text" id="username_r" placeholder="Username" /><br/>
             <input type="password" id="password_r" placeholder="Password"/><br/>
             <input type="password" id='c_password_r' placeholder='Confirm Your Password'/><br/>
-            <button type="submit" id='sub'>Register</button><br/><br/><br/>
+            <button type="submit" id="sub">Register</button><br/><br/><br/>
+                <div  id="errormsg">
+        <p id="signerror"></p>
+        <p  id="success"></p>
+        </div>
+           
             <span>Already have an account? <a href="#/login">Login</a></span>
             
         </section>
@@ -29,6 +36,7 @@
         <button id='submit'>Submit</button> -->
         
     </body>
+
     <script>
        $(document).ready(function(){
             
@@ -45,14 +53,16 @@
                     password: document.getElementById('password_r').value
                 },
                 success:function(resp){
-                    alert("INSERT!");
+                    //alert("INSERT!");
                 }
             });
             
             }
             
         });
-        
+
     </script>
+    <script src="./js/register_val.js"</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </html>
 
