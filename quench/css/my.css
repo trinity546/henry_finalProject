@@ -56,3 +56,22 @@ body {
  display:inline;   
     
 }
+
+<<<<<<< HEAD
+.nav_img {
+ display:inline-block;
+    max-width: 5%;
+    max-height: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.nav_img:hover {
+    opacity:75%;
+    
+=======
+/*FEED*/
+
+#feeddiv {
+ text-align:center;   
+>>>>>>> origin/master
+}

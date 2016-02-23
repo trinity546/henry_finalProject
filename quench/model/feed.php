@@ -3,14 +3,14 @@ include("connect.php");
 
     function insert_image(){
         global $db;
-        $query = "INSERT INTO images (title, user_id, path) VALUES ('".$_POST['title']."', '".$_POST['user_id']."', '".$_POST['path']."')";
+        $query = "INSERT INTO images (user_id, location, title, path, tags) VALUES ('".$_POST['user_id']."', '".$_POST['location']."', '".$_POST['title']."', '".$_POST['path']."', '".$_POST['tags']."')";
 
         $result = $db->query($query);
     }
 
-    function get_images(){
+    function get_feed(){
         global $db;
-        $query = "SELECT images.title, images.path FROM images";
+        $query = "SELECT images.user_id, images.location, images.title, images.path, images.tags FROM images";
         $result = $db->query($query);
         echo json_encode($result->fetchAll());
     }
