@@ -58,6 +58,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav_img {
  display:inline-block;
     max-width: 5%;
@@ -67,11 +68,11 @@ body {
 }
 .nav_img:hover {
     opacity:75%;
-    
-=======
+}
+
 /*FEED*/
 
 #feeddiv {
  text-align:center;   
->>>>>>> origin/master
+
 }
