@@ -42,11 +42,13 @@ MessageApp.config([
             {
                 templateUrl:"view/feed.html"
             } 
+
         ).when(
             "/additem",
             {
                 templateUrl:"view/additem.html"
             } 
+
         )
     }
 ]);
